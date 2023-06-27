@@ -1,11 +1,12 @@
 import './taskform.css'
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function Form() {
   const [inputValue, setInputValue] = useState('');
   const location=useLocation();
+  const navigate=useNavigate();
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
@@ -20,10 +21,15 @@ export default function Form() {
         task:inputValue,
         ref:location.state.ref
     },{headers}).then((res)=>{
-        console.log(res)
+        // console.log(res)
     })
-    console.log('Submitted:', inputValue);
+    // console.log('Submitted:', inputValue);
     setInputValue('');
+    navigate('/tasks',{
+        state:{
+          ref:location.state.ref
+        }
+      })
   };
 
   return (

@@ -40,7 +40,7 @@ const LoginPage = () => {
       }).then((res)=>{
         if (res.data.status === "success") {
           window.localStorage.setItem("token", res.data.token);
-          alert("SignIn Sucessfully!");
+          // alert("SignIn Sucessfully!");
           console.log(username);
           navigate('/tasks',{
             state:{
