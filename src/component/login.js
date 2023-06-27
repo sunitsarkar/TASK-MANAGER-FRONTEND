@@ -34,13 +34,13 @@ const LoginPage = () => {
       setErrors(errors);
     } else {
       // Perform login logic here with username and password
-      axios.post('http://localhost:8000/login',{
+      axios.post('https://task-manager-backend-qxu5.onrender.com/login',{
         username:username,
         password:password
       }).then((res)=>{
         if (res.data.status === "success") {
           window.localStorage.setItem("token", res.data.token);
-          // alert("SignIn Sucessfully!");
+          alert("SignIn Sucessfully!");
           console.log(username);
           navigate('/tasks',{
             state:{

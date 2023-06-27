@@ -12,9 +12,10 @@ export default function Task(){
     const ref=location.state.ref;
     const [tasks,setTasks]=useState([]);
     const [update,setUpdate]=useState('')
+    const apiUrl="https://task-manager-backend-qxu5.onrender.com"
 
     useEffect(()=>{
-        axios.get(`http://localhost:8000/tasks?ref=${ref}`,{ headers }).then(
+        axios.get(`https://task-manager-backend-qxu5.onrender.com/tasks?ref=${ref}`,{ headers }).then(
             (res)=>{
                 // console.log(res.data);
                 setTasks(res.data)
@@ -53,7 +54,7 @@ export default function Task(){
             <button onClick={handleLogout} id="logout">logout</button>
             <hr/>
             <div>
-            <button onClick={handelCreate} id="create">Cretate New Task</button>
+            <button onClick={handelCreate} id="create">Create New Task</button>
             <br/><br/>
             <div id="task-container">
                 {
@@ -63,7 +64,7 @@ export default function Task(){
                             <input placeholder="enter text to update" onChange={(e)=>{setUpdate(e.target.value)}}/>
                             <button className="btn" onClick={(e)=>{
                                 e.preventDefault();
-                                axios.put(`http://localhost:8000/tasks?id=${item._id}`,{
+                                axios.put(`https://task-manager-backend-qxu5.onrender.com/tasks?id=${item._id}`,{
                                     task:update,
                                     ref:ref
                                 })
@@ -71,7 +72,7 @@ export default function Task(){
                             }} >update</button>
                             <button onClick={(e)=>{
                                 e.preventDefault();
-                                axios.delete(`http://localhost:8000/tasks?id=${item._id}`)
+                                axios.delete(`https://task-manager-backend-qxu5.onrender.com/tasks?id=${item._id}`)
                                 // console.log(item._id)
                             }} className="btn">delete</button>
                         </div>

@@ -17,7 +17,7 @@ export default function Form() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle form submission logic here
-    axios.post('http://localhost:8000/tasks',{
+    axios.post('https://task-manager-backend-qxu5.onrender.com/tasks',{
         task:inputValue,
         ref:location.state.ref
     },{headers}).then((res)=>{
