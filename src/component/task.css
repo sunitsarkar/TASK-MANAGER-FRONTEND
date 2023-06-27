@@ -1,0 +1,49 @@
+#taskContaner{
+    margin-top: 100px;
+}
+
+#logout{
+    margin-left: 70em;
+    padding: 8px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+#logout:hover {
+    background-color: #bee704;
+}
+
+#create{
+    padding: 8px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+#create:hover {
+    background-color: #bee704;
+}
+
+#task-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.task{
+    border: 1px solid black;
+    min-width: 200px;
+    min-height: 50px ;
+    background-color: aliceblue;
+}
+
+.btn:hover{
+    background-color: #bee704;
+    cursor: pointer;
+}
