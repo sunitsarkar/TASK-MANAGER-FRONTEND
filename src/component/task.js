@@ -41,14 +41,6 @@ export default function Task(){
         document.location.reload()
       }
 
-    //   const handelDelete=(e)=>{
-    //     e.preventDefault();
-    //     const id=item._id
-    //     // axios.delete(`http://localhost:8000/tasks:`)
-    //     console.log(id)
-    //     console.log("sunit")
-    //   }
-
     if(show){
         return <div id="taskContaner">
             <button onClick={handleLogout} id="logout">logout</button>
