@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100%;
   background-color: #b19e9e;
 }
 
@@ -12,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  width: 30em;
+  width: 20em;
   background-color: #05575a;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
