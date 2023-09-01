@@ -1,11 +1,14 @@
-#taskContaner{
-    margin-top: 100px;
+.taskContaner{
+    padding-top: 20px;
+    background-color: #46a2b3;
+    width: 100%;
+    min-height: 590px;
 }
 
 #logout{
-    margin-left: 70em;
+    margin-left: 70rem;
     padding: 8px 20px;
-    background-color: #4caf50;
+    background-color: #a9c2bf;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -34,16 +37,37 @@
 #task-container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .task{
     border: 1px solid black;
-    min-width: 200px;
-    min-height: 50px ;
     background-color: aliceblue;
+    margin: 3px 5px;
+    border-radius: 5px;
+    padding: 3px 5px;
 }
 
 .btn:hover{
     background-color: #bee704;
     cursor: pointer;
 }
+#btns{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+@media screen and (max-width: 480px) {
+    #logout{
+        margin-left: 0px;
+        padding: 8px 20px;
+        background-color: #a9c2bf;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+  }
